@@ -290,12 +290,12 @@ lines`);
 const kelsAge = 35;
 
 // if statement only executes when the expression to true
-if(kelsAge >= 18) {
+if (kelsAge >= 18) {
     console.log(`kels is eligible to drink alchohol cos his age is ${kelsAge} `);
 }
 
 // else statement executes when the if statement returns false
-else{
+else {
     const yearsleft = 18 - kelsAge;
     console.log(`kels is not eligible to drink alchohol. wait another ${yearsleft}`)
 }
@@ -343,11 +343,39 @@ const sum = 35 + 'hello';
 console.log(sum);
 
 console.log('23' - '10' - 3)
-console.log('24'/ '2')
+console.log('24' / '2')
 
 let n = '1' + 1
 n = n - 1;
-console.log(n)
+console.log(n);
+
+//**************************** truthy and falsy values ****************/
+//we have five falssy values: 0, '', undefined, null, nan
+
+console.log(Boolean(0));
+console.log(Boolean(''));
+console.log(Boolean(undefined));
+console.log(Boolean(null));
+console.log(Boolean(NaN));
+
+const money = 100;
+
+if (money) {
+    console.log('go on a spree!')
+}
+else {
+    console.log('dont spend the money')
+}
+
+let product = 0;
+if (product) {
+    console.log('stay home')
+}
+else {
+    console.log('go on a shopping spree')
+}
+
+
 
 
 
