@@ -152,9 +152,181 @@ var linux
 
 // const cannot be reassigned
 const costfromtempsitetoKodex = 150;
-costfromtempsitetoKodex = 100;
+// costfromtempsitetoKodex = 100;
 console.log(costfromtempsitetoKodex)
 
 /**
  * always declare a variable with const when you know that the value should not be change
  */
+
+
+//************* basic operators**************/
+
+// Math operators
+const now = 2023;
+const divineAge = now - 1990;
+const davidAge = now - 1981;
+
+console.log(divineAge, davidAge);
+
+// multiplication, division and raise to power
+console.log(divineAge * 2, divineAge / 10, 2 ** 3)
+
+/**
+ * create 2 variables
+ * the datatype must be strings
+ * concetenate (add) the two variables
+ * and display the result in the console
+ */
+
+let first = "1";
+let second = "2";
+
+console.log(first);
+console.log(typeof first);
+console.log(second);
+console.log(typeof second);
+
+console.log(first + '' + second);
+
+
+//********Assignment Operators(=) ***********/
+let numberone = 10 + 15;
+numberone += 5;
+numberone = numberone + 5;
+console.log(numberone)
+
+let numbertwo = 2 + 7;
+numbertwo *= 7;
+// can be rewritten as:
+numbertwo = numbertwo * 7;
+console.log(numbertwo)
+
+let numberthree = 1;
+numberthree++;
+// can be rewritten as:
+numberthree = numberthree + 1
+console.log(numberthree)
+
+let numberfour = 4;
+numberfour--;
+// can be rewritten as:
+numberfour = numberfour - 1;
+console.log(numberfour)
+
+
+//*******Comparison operators(>, <, >=, <=) **********/
+let ugoage, olisaage;
+ugoage = '35';
+olisaage = 35;
+console.log(ugoage == olisaage);
+
+// *******operator precedence**********/
+const yearNow = 2023;
+const josephAge = yearNow - 1999;
+const henryAge = yearNow - 1990;
+
+console.log((josephAge + henryAge) * 10)
+
+//***********coding challange -> javascript operators************* /
+
+
+// exercise 1
+let MarksWeight = "78"
+let Marksheight = "1.69"
+let JohnWeight = "92"
+let Johnheight = "1.95"
+
+// solution
+let MarksBMI = MarksWeight / Marksheight ** 2;
+console.log(MarksBMI)
+
+let JohnBMI = JohnWeight / Johnheight ** 2;
+console.log(JohnBMI)
+
+console.log(MarksBMI > JohnBMI)
+
+// exercise 2
+let MarksWeight2 = "95"
+let Marksheight2 = "1.88"
+let JohnWeight2 = "85"
+let Johnheight2 = "1.76"
+
+// solution
+let MarksBMI2 = MarksWeight2 / Marksheight2 ** 2;
+console.log(MarksBMI2)
+
+let JohnBMI2 = JohnWeight2 / Johnheight2 ** 2;
+console.log(JohnBMI2)
+
+console.log(MarksBMI2 > JohnBMI2)
+
+
+// ********** strings and template literals*************/
+const myName = 'donald';
+const myJob = 'developer';
+const yearofbirth = 1717;
+const currentyear = 2017;
+
+const donald = "I'm " + myName + ', a ' + (currentyear - yearofbirth) + ' year old ' + myJob + '!';
+console.log(donald);
+
+const newdonald = `I'm ${myName}, a ${currentyear - yearofbirth} year old ${myJob}!`;
+console.log(newdonald);
+
+console.log(`hello how are u doing`);
+
+// console.log('this is \n\ 
+// for multiple \n\
+// lines');
+
+console.log(`this
+is
+for multiple
+lines`);
+
+//******8 taking decision: if / else statements *********/
+
+const kelsAge = 35;
+
+// if statement only executes when the expression to true
+if(kelsAge >= 18) {
+    console.log(`kels is eligible to drink alchohol cos his age is ${kelsAge} `);
+}
+
+// else statement executes when the if statement returns false
+else{
+    const yearsleft = 18 - kelsAge;
+    console.log(`kels is not eligible to drink alchohol. wait another ${yearsleft}`)
+}
+
+let dayOftheweek = "monday"
+
+if (dayOftheweek == "monday") {
+    console.log("sit at home")
+}
+else {
+    console.log("write some code")
+}
+
+
+// coding challenge
+
+let markBMI, johnBMI;
+markBMI = 28.3;
+johnBMI = 23.9;
+
+
+if (markBMI > johnBMI) {
+    console.log(`mark's BMI ${markBMI} is higher than john's BMI ${johnBMI}`)
+}
+else {
+    console.log(`john BMI is higher than Marks Bmi`)
+}
+
+
+
+
+
+
+
