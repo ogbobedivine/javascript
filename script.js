@@ -324,6 +324,32 @@ else {
     console.log(`john BMI is higher than Marks Bmi`)
 }
 
+//***************** type coversion and coercion **************/
+//type conversion is the process of conveerting a value from one type to another
+
+const inputyear = '1999'
+console.log(Number(inputyear), inputyear);
+console.log(Number(inputyear) + 10);
+
+console.log(Number('donald'))
+console.log(typeof NaN)
+
+console.log(String(23), 23)
+
+// type coercion
+// Type coersion is when javascript coerces or changes a data type by itself
+
+const sum = 35 + 'hello';
+console.log(sum);
+
+console.log('23' - '10' - 3)
+console.log('24'/ '2')
+
+let n = '1' + 1
+n = n - 1;
+console.log(n)
+
+
 
 
 
