@@ -375,6 +375,50 @@ else {
     console.log('go on a shopping spree')
 }
 
+//*******************8 logical operators ******************/
+//* logical operators are used to determine the logic between variables or values 
+// && is the AND operator
+// || is the OR operator
+// !is the NOT operator
+
+
+const hasDriverslicense = true;
+const hasGoodvision = false;
+const isTired = false
+
+console.log(hasDriverslicense && hasGoodvision);
+console.log(hasDriverslicense || hasGoodvision);
+console.log(!hasDriverslicense);
+
+
+if (hasDriverslicense && hasGoodvision) {
+    console.log('nonso is eligible to drive')
+}
+else {
+    console.log('someone else should drive')
+}
+
+if (hasDriverslicense && hasGoodvision || isTired) {
+    console.log('nonso is eligible to drive')
+}
+else {
+    console.log('someone else should drive')
+}
+
+if (hasDriverslicense || hasGoodvision) {
+    console.log('nonso is eligible to drive')
+}
+else {
+    console.log('someone else should drive')
+}
+
+if (!hasDriverslicense || hasGoodvision) {
+    console.log('nonso is eligible to drive')
+}
+else {
+    console.log('someone else should drive')
+}
+
 
 
 
