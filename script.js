@@ -419,12 +419,86 @@ else {
     console.log('someone else should drive')
 }
 
+// coding challenge 3
 
+// 1
+const manchesterAverage = (96 + 108 + 89) / 3;
+const barcelonaAverage = (88 + 91 + 110) / 3;
 
+console.log(manchesterAverage, barcelonaAverage);
 
+// 2
+if (manchesterAverage > barcelonaAverage) {
+    console.log('manchester wins the trophy')
+}
+else if (manchesterAverage < barcelonaAverage) {
+    console.log('barcelona wins the trophy')
+}
+else if (manchesterAverage === barcelonaAverage) {
+    console.log("its a draw! both teams wins")
+}
 
+// 3
+const manchesterAverage2 = (97 + 112 + 101) / 3;
+const barcelonaAverage2 = (109 + 95 + 123) / 3;
 
+if (manchesterAverage2 > barcelonaAverage2 && manchesterAverage2 >= 100) {
+    console.log('manchester wins the trophy')
+}
+else if (barcelonaAverage2 > manchesterAverage2 && barcelonaAverage2 >= 100) {
+    console.log('barcelona wins the trophy')
+}
+else if (manchesterAverage2 === barcelonaAverage2 && manchesterAverage2 >= 100) {
+    console.log('both wins the trophy')
+}
+else {
+    console.log('No one wins')
+}
 
+//************************ the switch statement***************** */
+// const day = "tuesday"
 
+// switch (day) {
+//     case 'monday':
+//         console.log('sit at home');
+//         break;
+//     case 'tuesday':
+//         console.log('go for javascript class');
+//         break;
+//     case 'wednesday':
+//         console.log('go to gym');
+//         break;
+//     case 'thusday':
+//     case 'friday':
+//         console.log('bake some cake');
+//         break;
+//     case 'saturday':
+//     case 'sunday':
+//         console.log('write some code');
+//         break;
+//     default:
+//         console.log('dont do anything')
 
+// }
+
+//************ using if statement in switch statement */
+const day = 'monday'
+if (day === 'monday') {
+    console.log('sit at home')
+}
+else if (day === 'tuesday') {
+    console.log('go to javascript class')
+}
+else if (day === 'wednesday') {
+    console.log('go to gym')
+}
+else if (day === 'thurday' || day === 'friday') {
+    console.log('bake some cake')
+}
+else if (day === 'saturday' || day === 'sunday') {
+    console.log('cook beans')
+}
+else {
+    console.log('dont do anything')
+}
 
