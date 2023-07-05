@@ -502,3 +502,109 @@ else {
     console.log('dont do anything')
 }
 
+//************ the ternary operator*********/
+
+// if (age >= 18) {
+//     console.log('i love alcohol')
+// }
+// else {
+//     console.log('i like capri sun')
+// }
+// or
+const age = 24;
+age >= 18 ? console.log('i love alcohol') : console.log('i like capri sun')
+
+// coding challenge 4
+const bill = 275
+const tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+console.log(`the bill was ${bill}, the tip was ${tip}, and the total value is ${bill + tip}`);
+
+
+
+//************************ functions ********************* */
+function sayHiToDonald() {
+    console.log('my name is donald. say hi')
+}
+
+// in order  for the function to be used it has to be invoked / called
+sayHiToDonald();
+
+function getfruitname(item1, item2) {
+    const juice = `friut salad is made with ${item1} and ${item2}`
+    return juice;
+}
+const friutsalad = getfruitname('cabbage', 'carrot')
+console.log(friutsalad);
+
+//  or
+
+console.log(getfruitname('eggs', 'milk'));
+console.log(getfruitname('paw paw', 'peanut'))
+
+
+//*********************** function declearation and function expressions ******** */
+
+// function declaration
+function calculateage(birthyear) {
+    return 2023 - birthyear
+}
+console.log(calculateage(1998))
+
+// function expressions
+// let a = b + c
+
+const calculateage1 = function (birthyear) {
+    return 2023 - birthyear
+}
+
+console.log(calculateage1(1989))
+
+//*************************** arrow functions**************** */
+
+const calculateage2 = birthyear => 2023 - birthyear
+console.log(calculateage2(1717))
+
+const yearsuntilretirement = (birthyear, firstname) => {
+    const age = 2023 - birthyear;
+    const retirement = 60 - age;
+    return `${firstname} retires in ${retirement} years`
+}
+
+console.log(yearsuntilretirement(1965, 'donald'));
+console.log(yearsuntilretirement(2006, 'nonso'));
+
+
+// ****************function calling other functions*************
+function cutfriutpieces(friut) {
+    return friut * 4;
+}
+
+function fruitprocessor(item1, item2) {
+    const item1pieces = cutfriutpieces(item1);
+    const item2pieces = cutfriutpieces(item2);
+
+    const juice = `juice is made with ${item1pieces} and ${item2pieces} pieces of bananas`;
+    return juice
+}
+console.log(fruitprocessor(3, 2))
+
+// ********************* reviewing functions **********************
+
+const calculateage3 = birthyear => 2023 - birthyear
+console.log(calculateage2(1717))
+
+const yearsuntilretirement2 = (birthyear, firstname) => {
+    const age = 2023 - birthyear;
+    const retirement = 60 - age;
+    if (retirement > 0) {
+        console.log(`${firstname} retires in ${retirement} years`)
+        return retirement
+    }
+    else {
+        console.log(`${firstname} has already retires`)
+        return -1
+    } 
+}
+
+console.log(yearsuntilretirement2(1965, 'donald'));
+console.log(yearsuntilretirement2(1945, 'nonso'));
