@@ -703,3 +703,21 @@ else {
     console.log('he still de learn work')
 }
 
+// coding challenge 8
+
+const calculatetip = function (bill) {
+    return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+}
+console.log(calculatetip(100))
+
+// task 2
+const bills = [125, 555, 44]
+
+// task 3
+const tips = [calculatetip(bills[0]), calculatetip(bills[1]), calculatetip(bills[2])];
+
+// task 4
+const totals = [bills[0] + tips[0], bills[1], + tips[1], bills[2] + tips[2]]
+
+console.log(bills, tips, totals);
+
