@@ -608,3 +608,98 @@ const yearsuntilretirement2 = (birthyear, firstname) => {
 
 console.log(yearsuntilretirement2(1965, 'donald'));
 console.log(yearsuntilretirement2(1945, 'nonso'));
+
+
+// coding challenge 6 ~ fuction
+
+// task 1
+
+const calcaverage = (a, b, c) => (a + b + c) / 3;
+
+// task 2
+let scoremanchester = calcaverage(44, 23, 71);
+let scorebarcelona = calcaverage(65, 54, 49);
+console.log(scoremanchester, scorebarcelona)
+
+// task 3
+const checkwinner = function (avgbarcelona, avgmanchester) {
+    if (avgmanchester >= 2 * avgbarcelona) {
+        console.log(`manchester wins ❤️‍🔥 (${avgmanchester} vs ${avgbarcelona})`)
+    }
+    else if (avgbarcelona >= 2 * avgmanchester){
+        console.log(`barcelona wins ❤️‍🔥 (${avgbarcelona}
+            vs ${avgmanchester})`)
+    }
+    else {
+        console.log(`nobody won `)
+    }
+}
+
+// taks 4
+
+
+
+//******************************** introduction to arrays **************** */
+let student1, student2, student3;
+student1 = 'donald';
+student2 = 'somto';
+student3 = 'micheal'
+
+// method 1
+const friends = ['ugo', 'prisca', 'david', 'divine'];
+console.log(friends);
+console.log(friends[1])
+console.log(friends.length)
+
+friends[1] = 'donald';
+console.log(friends)
+
+// method 2
+// const people = new Array('joseph', 'donald', 23, 81)
+// console.log(people)
+
+
+const findage = function (birthyear){
+    return 2023 - birthyear
+}
+const years = [1990, 1965, 1914, 1945, 2000]
+
+const age1 = findage(years[0]);
+const age2 = findage(years[1]);
+const age3 = findage(years[years.length - 1]);
+
+console.log(age1, age2, age3)
+
+//****************** */ array methods ************************************
+const newfreinds = ['ugo', 'prisca', 'henry', 'divine', 'david']
+
+// Appends new elements to the end of an array, and returns the new length of the array.
+const newlenth = newfreinds.push('donald');
+console.log(newfreinds);
+console.log(newlenth)
+
+// Inserts new elements at the start of an array, and returns the new length of the array.
+newfreinds.unshift('kels');
+console.log(newfreinds)
+
+// Removes the last element from an array and returns it.If the array is empty, undefined is returned and the array is not modified.
+newfreinds.pop();
+console.log(newfreinds)
+
+// Removes the first element from an array and returns it.If the array is empty, undefined is returned and the array is not modified.
+newfreinds.shift;
+console.log(newfreinds)
+
+// Returns the index of the first occurrence of a value in an array, or - 1 if it is not present.
+console.log(newfreinds.indexOf('divine'))
+
+// Determines whether an array includes a certain element, returning true or false as appropriate.
+console.log(newfreinds.includes('henry'))
+
+if (newfreinds.includes('divine')) {
+    console.log('he is a senior dev')
+}
+else {
+    console.log('he still de learn work')
+}
+
