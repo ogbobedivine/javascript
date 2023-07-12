@@ -603,7 +603,7 @@ const yearsuntilretirement2 = (birthyear, firstname) => {
     else {
         console.log(`${firstname} has already retires`)
         return -1
-    } 
+    }
 }
 
 console.log(yearsuntilretirement2(1965, 'donald'));
@@ -626,7 +626,7 @@ const checkwinner = function (avgbarcelona, avgmanchester) {
     if (avgmanchester >= 2 * avgbarcelona) {
         console.log(`manchester wins ❤️‍🔥 (${avgmanchester} vs ${avgbarcelona})`)
     }
-    else if (avgbarcelona >= 2 * avgmanchester){
+    else if (avgbarcelona >= 2 * avgmanchester) {
         console.log(`barcelona wins ❤️‍🔥 (${avgbarcelona}
             vs ${avgmanchester})`)
     }
@@ -659,7 +659,7 @@ console.log(friends)
 // console.log(people)
 
 
-const findage = function (birthyear){
+const findage = function (birthyear) {
     return 2023 - birthyear
 }
 const years = [1990, 1965, 1914, 1945, 2000]
@@ -721,3 +721,89 @@ const totals = [bills[0] + tips[0], bills[1], + tips[1], bills[2] + tips[2]]
 
 console.log(bills, tips, totals);
 
+// ******************************* Introduction to Objectsm ******************************
+const donaldArray = [
+    'Donald',
+    'Wilfred',
+    2023 - 1999,
+    'Developer',
+    ['kels', 'somto', 'olisa']
+];
+
+const donaldObject = {
+    firstName: 'Donald',
+    lastName: 'Wilfred',
+    age: 2023 - 1999,
+    job: 'Developer',
+    friends: ['Micheal', 'Olisa', 'Ugo']
+}
+
+console.log(donaldObject);
+
+// Dot vs Bracket Notation
+
+// Dot Notation
+console.log(donaldObject.job);
+
+// Bracket Notation
+console.log(donaldObject['firstName']);
+
+
+const nameKey = "Name";
+console.log(donaldObject['first' + nameKey]); //firstName
+console.log(donaldObject['last' + nameKey]); //lastName
+
+// const intrestedIn = prompt('What do you want to know about me? Choose between firstName, lastName, age, job, and friends');
+
+// if(donaldObject[intrestedIn]){
+//     console.log(donaldObject[intrestedIn]);
+// }
+// else{
+//     console.log('Wrong Request');
+// }
+
+donaldObject.location = "Italy";
+donaldObject['gitHub'] = "donguillotine";
+console.log(donaldObject);
+
+
+// Donald has 3 friends and his best friend is Ugo
+console.log(`${donaldObject.firstName} has ${donaldObject.friends.length} friends and his best friend is ${donaldObject.friends[2]}`);
+
+
+// ********************************* Object Methods *************************************
+const students = {
+    firstName: 'Donald',
+    lastName: 'Nwokoro',
+    birthYear: 1991,
+    job: 'Developer',
+    friends: ['Henry', 'Prisca', 'Olisa'],
+    hasDriversLicense: false,
+    calculateAge: function () {
+        this.age = 2023 - this.birthYear;
+        return this.age;
+    },
+    getSummary: function () {
+        // Donald is a 32 year old Developer, and he has a/no drivers licence
+        return `${this.firstName} is a ${this.calculateAge()}-year old ${this.job}, and he has ${this.hasDriversLicense ? 'a' : 'no'} drivers license`;
+    }
+}
+console.log(students.calculateAge());
+console.log(students.age);
+console.log(students.getSummary());
+
+
+///////////////////////////////////////
+// Coding Challenge #3
+
+/*
+Let's go back to Mark and John comparing their BMIs! This time, let's use objects to implement the calculations! Remember: BMI = mass / height ** 2 = mass / (height * height). (mass in kg and height in meter)
+
+1. For each of them, create an object with properties for their full name, mass, and height (Mark Miller and John Smith)
+2. Create a 'calcBMI' method on each object to calculate the BMI (the same method on both objects). Store the BMI value to a property, and also return it from the method.
+3. Log to the console who has the higher BMI, together with the full name and the respective BMI. Example: "John Smith's BMI (28.3) is higher than Mark Miller's (23.9)!"
+
+TEST DATA: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.95 m tall.
+
+GOOD LUCK 😀
+*/
