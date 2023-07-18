@@ -843,3 +843,46 @@ else if (john.bmi > mark.bmi) {
 else {
     console.log(`No one wins 😥`);
 }
+
+//************************* iteration: for loop ***************/
+
+for (let i = 1; i <= 50; i++) {
+    console.log(i);
+}
+
+// looping arrays, breaking and continuing
+const divinearray = [
+    'divine',
+    'mbgoji',
+    2023 - 1999,
+    'developer',
+    ['micheal', 'somto', 'olisa']
+];
+
+const types = [];
+
+for(let i = 0; i < divinearray.length; i++) {
+    console.log(divinearray[i], typeof divinearray[i]);
+
+    types.push(divinearray[i]);
+}
+
+// exercise
+
+const timeline = [1991, 2003, 2013, 2027];
+const ages = [];
+
+for (let counter = 0; counter < timeline.length; counter++){
+    ages.push(2023 - timeline[counter])
+}
+
+console.log(ages)
+
+// continue and break statements
+console.log('----------- only string----------')
+
+for (let counter = 0; counter < divinearray.length; counter++){
+    if(typeof divinearray[counter] !== 'string') continue;
+    console.log(divinearray[counter], typeof divinearray[counter]);
+}
+
