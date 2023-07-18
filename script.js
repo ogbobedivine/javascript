@@ -861,7 +861,7 @@ const divinearray = [
 
 const types = [];
 
-for(let i = 0; i < divinearray.length; i++) {
+for (let i = 0; i < divinearray.length; i++) {
     console.log(divinearray[i], typeof divinearray[i]);
 
     types.push(divinearray[i]);
@@ -872,17 +872,81 @@ for(let i = 0; i < divinearray.length; i++) {
 const timeline = [1991, 2003, 2013, 2027];
 const ages = [];
 
-for (let counter = 0; counter < timeline.length; counter++){
+for (let counter = 0; counter < timeline.length; counter++) {
     ages.push(2023 - timeline[counter])
 }
 
 console.log(ages)
 
 // continue and break statements
-console.log('----------- only string----------')
 
-for (let counter = 0; counter < divinearray.length; counter++){
-    if(typeof divinearray[counter] !== 'string') continue;
+console.log('----------- the countinue statement "jump over" one iteration in the loop----------')
+
+for (let counter = 0; counter < divinearray.length; counter++) {
+    if (typeof divinearray[counter] !== 'string') continue;
     console.log(divinearray[counter], typeof divinearray[counter]);
 }
+
+console.log('----------break statement "jumps out" of the loop------------')
+for (let counter = 0; counter < divinearray.length; counter++) {
+    if (typeof divinearray[counter] === 'number') break;
+
+    console.log(divinearray[counter], typeof divinearray[counter]);
+}
+
+//---------------------------- iteration: while loop -----------------------
+
+// the while loop loops thruogh a block of code as long as a specified condition is true.
+
+let phone = 1;
+
+while (phone <= 10) {
+    console.log(`i have ${phone} phones`);
+    phone++;
+}
+
+// random numbers from 1 - 6
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+
+while (dice !== 6) {
+    console.log(`you rolled a ${dice}`);
+    dice = Math.trunc(Math.random() * 6) + 1;
+    if (dice === 6) console.log(`the loop has ended`);
+}
+
+
+// coding challenge
+
+// 1
+const Bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52]
+
+// 2
+
+const Tip = [];
+const Totals = [];
+
+// 3
+const calcTip = function (Bills) {
+    return Bills >= 50 && Bills <= 300 ? Bills * 0.15 : Bills * 0.2;
+}
+
+// console.log(calcTip(Bills[0]) + Bills[0])
+// console.log(calcTip(Bills[1]))
+// console.log(calcTip(Bills[2]))
+
+for (let i = 0; i < Bills.length; i++) {
+    console.log(`The tips is ${calcTip(Bills[i])}`)
+}
+
+console.log(`****Total***`)
+for (let i = 0; i < Bills.length; i++) {
+    console.log(`The total is ${calcTip(Bills[i]) + Bills[i]}`)
+}
+
+
+
+
+
+
 
