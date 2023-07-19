@@ -947,6 +947,3 @@ for (let i = 0; i < Bills.length; i++) {
 
 
 
-
-
-
